@@ -1,39 +1,17 @@
-Blitz3D open source release!
+The Quest to Upgrade Blitz3D
 
-Workspace and project files are in MSVC 6.0 format.
+Background:
 
-Ide and Debugger require MFC which is included with MSVC 6.0, but not with later free/express versions of MSVC.
+Blitz3D is an old-school computer game programming language and IDE made by Blitz Research. Many programmers like myself got started in game development using this product. With a syntax inherited from BASIC, it makes 3D graphics programming a breeze. However, the problem with Blitz3D is... it's really, really old. And games made with it don't run very well on modern systems (unless run in windowed mode), most likely due to its massively outdated version of DirectX. But I felt that Blitz3D shouldn't be left to die. So I set out to upgrade it.
 
-You can grab the prebuilt free version of blitz3d from https://blitzresearch.itch.io/blitz3d.
+The Plan:
 
-Steps to build:
+I want to update Blitz3D to at least DirectX 9, and make any other changes that will get games made with it to run well on modern computers. I also hope to add some new features when the main upgrades are finished. It won't be easy, but I hope it will be fun.
 
-1) Install freeimage241 into same dir as blitz3d: http://monkeycoder.co.nz/downloads/freeimage241.zip
+What's Finished:
 
-2) Install fmodapi375win into same dir as blitz3d: http://www.fmod.org/files/public/fmodapi375win.zip
+I made the necessary changes to "bblaunch," so it compiles. Unfortunately, as of now, it simply outputs an error. But I'm on it!
 
-3) Open blitz3d workspace in MSVC 6.0.
+Other Info:
 
-4) Build project 'bblaunch' using config 'Win32 Blitz3D Release'.
-
-5) Output files should end up in _release subdir.
-
-6) Also copy fmodapi375win/api/fmod.dll to _release/bin.
-
-7) Done?
-
-Blitz3d is released under the zlib/libpng license.
-
-The zlib/libpng License
-
-Copyright (c) 2013 Blitz Research Ltd
-
-This software is provided 'as-is', without any express or implied warranty. In no event will the authors be held liable for any damages arising from the use of this software.
-
-Permission is granted to anyone to use this software for any purpose, including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
-
-1. The origin of this software must not be misrepresented; you must not claim that you wrote the original software. If you use this software in a product, an acknowledgment in the product documentation would be appreciated but is not required.
-
-2. Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
-
-3. This notice may not be removed or altered from any source distribution.
+The original Blitz3D source code is here: https://github.com/blitz-research/blitz3d
