@@ -9,9 +9,13 @@
 //-----------------------------------------------------------------------------
 #include <windows.h>
 #include <windowsx.h>
-#include <ddraw.h>
+#include <ddraw7.h>
 #include <dinput.h>
 #include <dmusici.h>
+
+// defined LPDIRECTMUSIC, was not originally defined
+
+typedef struct IDirectMusic FAR *LPDIRECTMUSIC;
 
 typedef HRESULT(WINAPI * DIRECTDRAWCREATE)( GUID*, LPDIRECTDRAW*, IUnknown* );
 typedef HRESULT(WINAPI * DIRECTDRAWCREATEEX)( GUID*, VOID**, REFIID, IUnknown* );
