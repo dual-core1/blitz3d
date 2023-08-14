@@ -217,6 +217,9 @@ int _cdecl main( int argc,char *argv[] ){
 		SetCurrentDirectory( in_file.substr(0,n).c_str() );
 	}
 
+	// dual-core: changed variable name 'environ' to 'env'.
+	// 'environ' was defined with a #define statement, so it was causing errors.
+
 	ProgNode *prog=0;
 	Environ *env=0;
 	Module *module=0;

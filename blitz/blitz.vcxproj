@@ -26,6 +26,7 @@
     <SccProjectName />
     <SccLocalPath />
     <ProjectGuid>{C4795F01-1DEC-45EF-BA83-F74DC57B2ED1}</ProjectGuid>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
@@ -80,24 +81,32 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>.\Debug\</OutDir>
+    <OutDir>D:\Work\blitz3d\_release\bin\</OutDir>
     <IntDir>.\Debug\</IntDir>
     <LinkIncremental>true</LinkIncremental>
+    <TargetName>blitzcc</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Blitz2DRelease|Win32'">
-    <OutDir>.\blitz___Win32_Blitz2DRelease\</OutDir>
+    <OutDir>D:\Work\blitz3d\_release\bin\</OutDir>
     <IntDir>.\blitz___Win32_Blitz2DRelease\</IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <TargetName>blitzcc</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Blitz3DRelease|Win32'">
-    <OutDir>.\blitz___Win32_Blitz3DRelease\</OutDir>
+    <OutDir>D:\Work\blitz3d\_release\bin\</OutDir>
     <IntDir>.\blitz___Win32_Blitz3DRelease\</IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <TargetName>blitzcc</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>.\Release\</OutDir>
+    <OutDir>D:\Work\blitz3d\_release\bin\</OutDir>
     <IntDir>.\Release\</IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <TargetName>blitzcc</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <OutDir>D:\Work\blitz3d\_release\bin\</OutDir>
+    <TargetName>blitzcc</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
