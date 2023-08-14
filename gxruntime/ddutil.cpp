@@ -7,8 +7,8 @@
 
 extern gxRuntime *gx_runtime;
 
-#include "..\..\freeimage241\source\freeimage.h"
-
+// #include "..\..\freeimage241\source\freeimage.h"
+#include "../freeimage241/source/freeimage.h"
 static AsmCoder asm_coder;
 
 static void calcShifts( unsigned mask,unsigned char *shr,unsigned char *shl ){

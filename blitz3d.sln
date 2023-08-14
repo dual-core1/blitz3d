@@ -15,7 +15,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "blitz", "blitz\blitz.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "blitz3d", "blitz3d\blitz3d.vcxproj", "{BE6D20BB-377E-4906-932F-C8F9682BA639}"
 EndProject
-Project("{059D6162-CD51-11D0-AE1F-00A0C90FFFC3}") = "blitzide", "blitzide\blitzide.vcxproj", "{0EC97446-4575-4B39-AAD0-3FA96AD83574}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "blitzide", "blitzide\blitzide.vcxproj", "{0EC97446-4575-4B39-AAD0-3FA96AD83574}"
 	ProjectSection(ProjectDependencies) = postProject
 		{A2B41ECB-0F96-4B57-A96F-ECDC522FF7CA} = {A2B41ECB-0F96-4B57-A96F-ECDC522FF7CA}
 	EndProjectSection
@@ -24,7 +24,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "compiler", "compiler\compil
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "config", "config\config.vcxproj", "{A2B41ECB-0F96-4B57-A96F-ECDC522FF7CA}"
 EndProject
-Project("{059D6162-CD51-11D0-AE1F-00A0C90FFFC3}") = "debugger", "debugger\debugger.vcxproj", "{9E5DB15C-D663-49A0-B726-AF5B31D98A5B}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "debugger", "debugger\debugger.vcxproj", "{9E5DB15C-D663-49A0-B726-AF5B31D98A5B}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gxruntime", "gxruntime\gxruntime.vcxproj", "{B4FE359C-9658-4E8D-BF08-51D9D7CCE195}"
 EndProject
@@ -103,6 +103,16 @@ Global
 		{BE6D20BB-377E-4906-932F-C8F9682BA639}.Release|x86.Build.0 = Release|Win32
 		{BE6D20BB-377E-4906-932F-C8F9682BA639}.Template|x86.ActiveCfg = Template|Win32
 		{BE6D20BB-377E-4906-932F-C8F9682BA639}.Template|x86.Build.0 = Template|Win32
+		{0EC97446-4575-4B39-AAD0-3FA96AD83574}.Blitz2DRelease|x86.ActiveCfg = Blitz2DRelease|Win32
+		{0EC97446-4575-4B39-AAD0-3FA96AD83574}.Blitz2DRelease|x86.Build.0 = Blitz2DRelease|Win32
+		{0EC97446-4575-4B39-AAD0-3FA96AD83574}.Blitz3DRelease|x86.ActiveCfg = Blitz3DRelease|Win32
+		{0EC97446-4575-4B39-AAD0-3FA96AD83574}.Blitz3DRelease|x86.Build.0 = Blitz3DRelease|Win32
+		{0EC97446-4575-4B39-AAD0-3FA96AD83574}.Debug|x86.ActiveCfg = Debug|Win32
+		{0EC97446-4575-4B39-AAD0-3FA96AD83574}.Debug|x86.Build.0 = Debug|Win32
+		{0EC97446-4575-4B39-AAD0-3FA96AD83574}.Release|x86.ActiveCfg = Release|Win32
+		{0EC97446-4575-4B39-AAD0-3FA96AD83574}.Release|x86.Build.0 = Release|Win32
+		{0EC97446-4575-4B39-AAD0-3FA96AD83574}.Template|x86.ActiveCfg = Template|Win32
+		{0EC97446-4575-4B39-AAD0-3FA96AD83574}.Template|x86.Build.0 = Template|Win32
 		{6F5C6540-526D-43E0-9480-07CE68C16A90}.Blitz2DRelease|x86.ActiveCfg = Blitz2DRelease|Win32
 		{6F5C6540-526D-43E0-9480-07CE68C16A90}.Blitz2DRelease|x86.Build.0 = Blitz2DRelease|Win32
 		{6F5C6540-526D-43E0-9480-07CE68C16A90}.Blitz3DRelease|x86.ActiveCfg = Blitz3DRelease|Win32
@@ -123,6 +133,16 @@ Global
 		{A2B41ECB-0F96-4B57-A96F-ECDC522FF7CA}.Release|x86.Build.0 = Release|Win32
 		{A2B41ECB-0F96-4B57-A96F-ECDC522FF7CA}.Template|x86.ActiveCfg = Template|Win32
 		{A2B41ECB-0F96-4B57-A96F-ECDC522FF7CA}.Template|x86.Build.0 = Template|Win32
+		{9E5DB15C-D663-49A0-B726-AF5B31D98A5B}.Blitz2DRelease|x86.ActiveCfg = Blitz2DRelease|Win32
+		{9E5DB15C-D663-49A0-B726-AF5B31D98A5B}.Blitz2DRelease|x86.Build.0 = Blitz2DRelease|Win32
+		{9E5DB15C-D663-49A0-B726-AF5B31D98A5B}.Blitz3DRelease|x86.ActiveCfg = Blitz3DRelease|Win32
+		{9E5DB15C-D663-49A0-B726-AF5B31D98A5B}.Blitz3DRelease|x86.Build.0 = Blitz3DRelease|Win32
+		{9E5DB15C-D663-49A0-B726-AF5B31D98A5B}.Debug|x86.ActiveCfg = Debug|Win32
+		{9E5DB15C-D663-49A0-B726-AF5B31D98A5B}.Debug|x86.Build.0 = Debug|Win32
+		{9E5DB15C-D663-49A0-B726-AF5B31D98A5B}.Release|x86.ActiveCfg = Release|Win32
+		{9E5DB15C-D663-49A0-B726-AF5B31D98A5B}.Release|x86.Build.0 = Release|Win32
+		{9E5DB15C-D663-49A0-B726-AF5B31D98A5B}.Template|x86.ActiveCfg = Template|Win32
+		{9E5DB15C-D663-49A0-B726-AF5B31D98A5B}.Template|x86.Build.0 = Template|Win32
 		{B4FE359C-9658-4E8D-BF08-51D9D7CCE195}.Blitz2DRelease|x86.ActiveCfg = Blitz2DRelease|Win32
 		{B4FE359C-9658-4E8D-BF08-51D9D7CCE195}.Blitz2DRelease|x86.Build.0 = Blitz2DRelease|Win32
 		{B4FE359C-9658-4E8D-BF08-51D9D7CCE195}.Blitz3DRelease|x86.ActiveCfg = Blitz3DRelease|Win32

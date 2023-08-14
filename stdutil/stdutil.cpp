@@ -148,7 +148,9 @@ string itoa( int n ){
 	return string( buff );
 }
 
-static int _finite( double n ){		// definition: exponent anything but 2047.
+// dual-core: added __cdecl to avoid C2373 (different type modifiers)
+
+static int __cdecl _finite( double n ){		// definition: exponent anything but 2047.
 
 	int e;					// 11 bit exponent
 	const int eMax = 2047;	// 0x7ff, all bits = 1	
@@ -161,7 +163,9 @@ static int _finite( double n ){		// definition: exponent anything but 2047.
 	return e != eMax;
 }
 
-static int _isnan( double n ){		// definition: exponent 2047, nonzero fraction.
+// dual-core: added __cdecl to avoid C2373 (different type modifiers)
+
+static int __cdecl _isnan( double n ){		// definition: exponent 2047, nonzero fraction.
 
 	int e;					// 11 bit exponent
 	const int eMax = 2047;	// 0x7ff, all bits = 1	
