@@ -12,6 +12,10 @@ What's Finished:
 
 I made the necessary changes to "bblaunch," so it compiles. Unfortunately, as of now, it simply outputs an error. But I'm on it!
 
+What's Being Done:
+
+Currently fixing the errors in bbruntime_dll so 'runtime.dll' can be generated, which bblaunch (Blitz3D.exe) relies on
+
 Other Info:
 
 The original Blitz3D source code is here: https://github.com/blitz-research/blitz3d
