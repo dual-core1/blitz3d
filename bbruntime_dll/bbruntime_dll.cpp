@@ -1,6 +1,9 @@
 
 #pragma warning( disable:4786 )
 
+// dual-core: added this to avoid 'unresolved external symbol sprintf' errors
+#pragma comment (lib, "legacy_stdio_definitions.lib")
+
 #include "bbruntime_dll.h"
 #include "../debugger/debugger.h"
 

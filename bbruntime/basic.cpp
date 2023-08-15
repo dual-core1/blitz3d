@@ -20,9 +20,6 @@ static const int STR_NEW_INC=512;
 //current data ptr
 static BBData *dataPtr;
 
-//chunks of mem - WHAT THE FUCK WAS I ON?!?!?!?
-//static list<char*> memBlks;
-
 //strings
 static BBStr usedStrs,freeStrs;
 

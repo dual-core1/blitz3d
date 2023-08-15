@@ -170,7 +170,7 @@ static log( const string &t ){
 	gx_runtime->debugLog( t.c_str() );
 }
 #else
-static log( const string &t ){}
+static int log(const string &t) { return 0; } // dual-core: edited this function so it is of type int (did not previously have return type). Since it has to return an int, I just had it return 0.
 #endif
 
 static Surf *findSurf( q3_face *f ){

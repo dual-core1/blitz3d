@@ -369,7 +369,10 @@ static void parseMeshInfo( MeshModel *root,float curr_time ){
 	Vector pivot;
 	Animation anim;
 	unsigned short id=65535,parent=65535,flags1,flags2;
-	Box box( Vector(),Vector() );
+
+	// dual-core: used new() to create an instance, the old way caused errors
+	// Box box( Vector(),Vector() );
+	Box *box = new Box(Vector(), Vector());
 	Vector box_centre;
 	while( int chunk_id=nextChunk() ){
 		switch( chunk_id ){
@@ -394,9 +397,35 @@ static void parseMeshInfo( MeshModel *root,float curr_time ){
 			_log( "PIVOT: "+ftoa(pivot.x)+","+ftoa(pivot.y)+","+ftoa(pivot.z) );
 			break;
 		case 0xb014:	//BOUNDBOX
-			in.sgetn( (char*)&box.a,12 );
-			in.sgetn( (char*)&box.b,12 );
-			box_centre=box.centre();
+
+			// dual-core: changed dot operator to arrow
+			/*
+			
+			dual-core: note
+
+			box::a and box::b are objects of the Vector class (not to be confused with std::vector).
+			The Vector class has three floats, x, y, and z.
+			The original coder seems to have thought that getting 12 bytes and storing it in the Vectors
+			would store 4 bytes in each float.
+
+			That's... not how it works.
+			
+			*/
+
+			// original, error causing code
+			// in.sgetn( (char*)box->a,12 );
+			// in.sgetn( (char*)box->b,12 );
+
+			// new, better code
+			in.sgetn(reinterpret_cast<char*>(&box->a.x), 4);
+			in.sgetn(reinterpret_cast<char*>(&box->a.y), 4);
+			in.sgetn(reinterpret_cast<char*>(&box->a.z), 4);
+
+			in.sgetn(reinterpret_cast<char*>(&box->b.x), 4);
+			in.sgetn(reinterpret_cast<char*>(&box->b.y), 4);
+			in.sgetn(reinterpret_cast<char*>(&box->b.z), 4);
+
+			box_centre=box->centre();
 			if( conv ) box_centre=conv_tform * box_centre;
 			_log( "BOUNDBOX: min="+ftoa(box.a.x)+","+ftoa(box.a.y)+","+ftoa(box.a.z)+" max="+ftoa(box.b.x)+","+ftoa(box.b.y)+","+ftoa(box.b.z) );
 			break;

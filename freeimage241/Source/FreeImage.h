@@ -203,7 +203,9 @@ FI_STRUCT(FreeImageIO) {
 FI_STRUCT (Plugin);
 FI_STRUCT (FreeImage);
 
-typedef FIBITMAP *(DLL_CALLCONV * FI_AllocateProc)(int width, int height, int bpp, unsigned red_mask FI_DEFAULT(0), unsigned green_mask FI_DEFAULT(0), unsigned blue_mask FI_DEFAULT(0));
+// dual-core: default-arguments are no longer allowed, they generate the C2383 error
+
+typedef FIBITMAP *(DLL_CALLCONV * FI_AllocateProc)(int width, int height, int bpp, unsigned red_mask, unsigned green_mask, unsigned blue_mask);
 typedef void (DLL_CALLCONV *FI_FreeProc)(FIBITMAP *dib);
 typedef void (DLL_CALLCONV *FI_UnloadProc)(FIBITMAP *dib);
 typedef unsigned (DLL_CALLCONV *FI_GetColorsUsedProc)(FIBITMAP *dib);
