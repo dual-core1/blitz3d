@@ -10,11 +10,11 @@ I want to update Blitz3D to at least DirectX 9, and make any other changes that 
 
 What's Finished:
 
-I made the necessary changes to "bblaunch," so it compiles. Unfortunately, as of now, it simply outputs an error. But I'm on it!
+Compiled Blitz3D from source (much harder than it sounds).
 
 What's Being Done:
 
-Currently fixing the errors in bbruntime_dll so 'runtime.dll' can be generated, which bblaunch (Blitz3D.exe) relies on
+Documenting the program before I begin upgrading it
 
 Other Info:
 
