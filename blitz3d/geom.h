@@ -15,7 +15,9 @@ const float TWOPI=PI*2.0f;			//360 degrees
 const float HALFPI=PI*.5f;			//90  degrees
 const float QUARTERPI=PI*.25f;		//45  degrees
 const float EPSILON=.000001f;		//small value
-const float INFINITY=10000000.0f;	//big value
+
+// dual-core: INFINITY is already defined
+//const float INFINITY=10000000.0f;	//big value
 
 class Vector{
 public:

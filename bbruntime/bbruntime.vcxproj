@@ -83,21 +83,28 @@
     <OutDir>.\Debug\</OutDir>
     <IntDir>.\Debug\</IntDir>
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>D:\Work\blitz3d\DX7\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Blitz2DRelease|Win32'">
     <OutDir>.\bbruntime___Win32_Blitz2DRelease\</OutDir>
     <IntDir>.\bbruntime___Win32_Blitz2DRelease\</IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>D:\Work\blitz3d\DX7\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Blitz3DRelease|Win32'">
     <OutDir>.\bbruntime___Win32_Blitz3DRelease\</OutDir>
     <IntDir>.\bbruntime___Win32_Blitz3DRelease\</IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>D:\Work\blitz3d\DX7\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>.\Release\</OutDir>
     <IntDir>.\Release\</IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>D:\Work\blitz3d\DX7\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <IncludePath>D:\Work\blitz3d\DX7\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

@@ -369,7 +369,10 @@ static void parseMeshInfo( MeshModel *root,float curr_time ){
 	Vector pivot;
 	Animation anim;
 	unsigned short id=65535,parent=65535,flags1,flags2;
-	Box box( Vector(),Vector() );
+
+	// dual-core: used new() to create an instance, the old way caused errors
+	// Box box( Vector(),Vector() );
+	Box *box = new Box(Vector(), Vector());
 	Vector box_centre;
 	while( int chunk_id=nextChunk() ){
 		switch( chunk_id ){
@@ -394,9 +397,13 @@ static void parseMeshInfo( MeshModel *root,float curr_time ){
 			_log( "PIVOT: "+ftoa(pivot.x)+","+ftoa(pivot.y)+","+ftoa(pivot.z) );
 			break;
 		case 0xb014:	//BOUNDBOX
-			in.sgetn( (char*)&box.a,12 );
-			in.sgetn( (char*)&box.b,12 );
-			box_centre=box.centre();
+
+			// dual-core: changed dot operator to arrow
+			// dual-core: TODO: I finally understand what the OG coder was trying to do, but I'd better commit first to be safe
+
+			in.sgetn( (char*)box->a,12 );
+			in.sgetn( (char*)box->b,12 );
+			box_centre=box->centre();
 			if( conv ) box_centre=conv_tform * box_centre;
 			_log( "BOUNDBOX: min="+ftoa(box.a.x)+","+ftoa(box.a.y)+","+ftoa(box.a.z)+" max="+ftoa(box.b.x)+","+ftoa(box.b.y)+","+ftoa(box.b.z) );
 			break;

@@ -102,7 +102,12 @@ int UDPStream::recv(){
 		if( ioctlsocket( sock,FIONREAD,&sz ) ){ e=-1;return 0; }
 		in_buf.resize( sz );in_get=0;
 		int len=sizeof(in_addr);
-		n=::recvfrom( sock,in_buf.begin(),sz,0,(sockaddr*)&in_addr,&len );
+
+		// dual-core: original was:
+		// n=::recvfrom( sock,in_buf.begin(),sz,0,(sockaddr*)&in_addr,&len );
+		// second parameter caused an error
+
+		n=::recvfrom( sock, &in_buf[0], sz, 0, (sockaddr*)&in_addr, &len );
 		if( n==SOCKET_ERROR ) continue;	//{ e=-1;return 0; }
 		in_buf.resize( n );
 		return getMsgIP();
@@ -116,7 +121,12 @@ int UDPStream::send( int ip,int port ){
 	int sz=out_buf.size();
 	out_addr.sin_addr.S_un.S_addr=htonl( ip );
 	out_addr.sin_port=htons( port ? port : addr.sin_port );
-	int n=::sendto( sock,out_buf.begin(),sz,0,(sockaddr*)&out_addr,sizeof(out_addr) );
+
+	// dual-core: original was:
+	// int n=::sendto( sock,out_buf.begin(),sz,0,(sockaddr*)&out_addr,sizeof(out_addr) );
+	// second parameter caused an error
+
+	int n=::sendto( sock, &out_buf[0], sz, 0, (sockaddr*)&out_addr, sizeof(out_addr) );
 	if( n!=sz ) return e=-1;
 	out_buf.clear();
 	return sz;

@@ -2,7 +2,7 @@
 #include "std.h"
 #include "entity.h"
 
-#include "stats.h"
+// #include "stats.h" dual-core: this file is missing, let's hope it's not necessary
 
 Entity *Entity::_orphans,*Entity::_last_orphan;
 
