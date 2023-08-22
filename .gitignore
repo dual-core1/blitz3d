@@ -8,3 +8,10 @@ Release
 _release
 *__Win32_*
 /innosetup/installs
+*.ipch
+*.db
+*.db-shm
+*.opendb
+.vs/blitz3d/v15/.suo
+bblaunch/.vs/bblaunch/v15/.suo
+*.db-wal
