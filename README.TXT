@@ -14,7 +14,7 @@ Compiled Blitz3D from source (much harder than it sounds).
 
 What's Being Done:
 
-Documenting the program before I begin upgrading it, transitioning to beginning DX upgrades
+I am not currently working on this, might pick it up again later.
 
 Other Info:
 
